@@ -30,7 +30,7 @@ body {
   background: linear-gradient(180deg, var(--card), #041025);
   border-radius: var(--radius);
   padding: 22px;
-  box-shadow: 0 8px 30px rgba(102, 130, 255, 0.6);
+  box-shadow: 0 6px 25px var(--accent);
   backdrop-filter: blur(6px);
 }
 
