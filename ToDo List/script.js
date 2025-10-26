@@ -114,15 +114,13 @@ function onListClick(e) {
 // * Mark the selected task as done
 function toggleDone(id) {
   todos = todos.map((t) => (t.id === id ? { ...t, done: !t.done } : t));
-
   reload();
 }
 
 // * Remove selected task
 function removeTodo(id) {
   todos = todos.filter((t) => t.id !== id);
-  save();
-  render();
+  reload();
 }
 
 // * Allow user to edit the selected task
