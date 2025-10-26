@@ -1,61 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Todo List</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
     <main class="container" aria-labelledby="title">
-        <!-- Header of the main container -->
-        <header>
-            <div>
-                <h1 id="title">Todo List</h1>
-                <div class="sub">
-                    By • Talha Ahmad
-                </div>
-            </div>
-        </header>
+      <!-- Header of the main container -->
+      <header>
+        <div>
+          <h1 id="title">Todo List</h1>
+          <div class="sub">By • Talha Ahmad</div>
+        </div>
+      </header>
 
-        <!-- The section area to add tasks -->
-         <section class="add-area" aria-label="Add todo">
-            <!-- Input Box -->
-            <input id="todo-input" placeholder="Add new task" aria-label="Todo input">
-            
-            <!-- Button ot add the task -->
-            <button id="add-btn" class="btn">
-                Add
-            </button>
-         </section>
+      <!-- The section area to add tasks -->
+      <section class="add-area" aria-label="Add todo">
+        <!-- Input Box -->
+        <input
+          id="todo-input"
+          placeholder="Add new task"
+          aria-label="Todo input"
+        />
 
-         <!-- Area where todo lists will be shown -->
-         <section class="list" id="todo-list" aria-live="polite"></section>
+        <!-- Button ot add the task -->
+        <button id="add-btn" class="btn">Add</button>
+      </section>
 
-         <!-- Status Area -->
-         <div class="meta">
-            <!-- Number of active todo lists -->
-            <div id="count">0 items</div>
-            
-            <!-- Filter buttons -->
-            <div class="filters" role="tab-list" aria-label="Filter todos">
-                <!-- Button to display all tasks -->
-                <button class="filter active" data-filter="all">All</button>
+      <!-- Area where todo lists will be shown -->
+      <section class="list" id="todo-list" aria-live="polite"></section>
 
-                <!-- Button to display only active tasks -->
-                <button class="filter" data-filter="active">Active</button>
+      <!-- Status Area -->
+      <div class="meta">
+        <!-- Number of active todo lists -->
+        <div id="count">0 items</div>
 
-                <!-- Button to display only completed tasks -->
-                <button class="filter" data-filter="completed">Completed</button>
-            </div>
+        <!-- Filter buttons -->
+        <div class="filters" role="tab-list" aria-label="Filter todos">
+          <!-- Button to display all tasks -->
+          <button class="filter active" data-filter="all">All</button>
 
-            <!-- Button to clear all completed tasks from the todo list -->
-             <div>
-                <button id="clear-completed" class="btn ghost">Clear Completed</button>
-             </div>
-         </div>
+          <!-- Button to display only active tasks -->
+          <button class="filter" data-filter="active">Active</button>
+
+          <!-- Button to display only completed tasks -->
+          <button class="filter" data-filter="completed">Completed</button>
+        </div>
+
+        <!-- Button to clear all completed tasks from the todo list -->
+        <div>
+          <button id="clear-completed" class="btn ghost">
+            Clear Completed
+          </button>
+        </div>
+      </div>
     </main>
 
     <script src="script.js"></script>
-</body>
+  </body>
 </html>

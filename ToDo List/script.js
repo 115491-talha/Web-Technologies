@@ -119,9 +119,10 @@ function toggleDone(id) {
 }
 
 // * Remove selected task
-function removeTodo(id){
-  todos = todos.filter(t => t.id !== id);
-  save(); render();
+function removeTodo(id) {
+  todos = todos.filter((t) => t.id !== id);
+  save();
+  render();
 }
 
 // * Allow user to edit the selected task
