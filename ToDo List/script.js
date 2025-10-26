@@ -10,7 +10,7 @@ const addBtn = document.getElementById("add-btn");
 const list = document.getElementById("todo-list");
 const countEl = document.getElementById("count");
 const filters = document.querySelectorAll(".filter");
-const clearBtn = document.getElementById("clearCompleted");
+const clearBtn = document.getElementById("clear-completed");
 
 // ? init
 load();
@@ -116,6 +116,12 @@ function toggleDone(id) {
   todos = todos.map((t) => (t.id === id ? { ...t, done: !t.done } : t));
 
   reload();
+}
+
+// * Remove selected task
+function removeTodo(id){
+  todos = todos.filter(t => t.id !== id);
+  save(); render();
 }
 
 // * Allow user to edit the selected task
